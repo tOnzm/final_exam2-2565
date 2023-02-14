@@ -2,10 +2,9 @@
 <h5 align="center">พัฒนาโดย</h5>
 <h3 align="center">นายธรรมรัตน์ หนูเงิน</h3>
 
-<h5 align="center">สาขาวิทยาการคอมพิวเตอร์, คณะศิลปศาสตร์และวิทยาศาสตร์ มหาวิทยาลัยราชภัฏศรีสะเกษ</h5>
+<h4 align="center">สาขาวิทยาการคอมพิวเตอร์, คณะศิลปศาสตร์และวิทยาศาสตร์ มหาวิทยาลัยราชภัฏศรีสะเกษ</h4>
 
-### Packages we are using
-
+### แพ็กเกจที่ใช้
 
 - csv : [link](https://pub.dev/packages/csv)
 - google_fonts : [link](https://pub.dev/packages/google_fonts)
