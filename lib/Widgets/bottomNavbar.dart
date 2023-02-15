@@ -1,5 +1,5 @@
-import 'package:final_exam/data/data2.dart';
-import 'package:final_exam/page/profile.dart';
+import 'package:final_exam/Screen/Home.dart';
+import 'package:final_exam/Screen/profile.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -11,18 +11,12 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
+  final List<Widget> _widgetOptions = <Widget>[
     Center(
-      child: Readcsv2(),
+      child: HomePage(),
     ),
-    /* Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ), */
     Center(
-      child: Profile(),
+      child: ProfileMe(),
     ),
   ];
 
@@ -44,10 +38,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
             icon: Icon(Icons.home),
             label: 'หน้าแรก',
           ),
-          /* BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
-          ), */
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'ผู้จัดทำ',

@@ -1,6 +1,4 @@
-import 'package:final_exam/data/data2.dart';
-import 'package:final_exam/page/profile.dart';
-import 'package:final_exam/widget/bottomNavBar.dart';
+import 'package:final_exam/Widgets/bottomNavBar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,23 +13,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        scaffoldBackgroundColor: Color(0xfffefefe),
-        textTheme: GoogleFonts.promptTextTheme(textTheme).copyWith(
-          bodyText2: GoogleFonts.sarabun(textStyle: textTheme.bodyText2),
-        ),
+        textTheme: GoogleFonts.sarabunTextTheme(Theme.of(context).textTheme),
+        primaryTextTheme:
+            GoogleFonts.promptTextTheme(Theme.of(context).primaryTextTheme),
         appBarTheme: const AppBarTheme(
-          color: Color(0xFFe1d5c9),
-        ),
+            color: Color(0xFFfefefe),
+            titleTextStyle: TextStyle(
+                color: Color(0xFF202224),
+                fontSize: 20,
+                fontWeight: FontWeight.w800),
+            iconTheme: IconThemeData(color: Color(0xff1b1c1e))),
         iconTheme: const IconThemeData(
           color: Color(0xFFc49450),
         ),
         drawerTheme: const DrawerThemeData(
-          scrimColor: Color(0xdde1d5c9),
-          backgroundColor: Color(0xFFe1d5c9),
+          scrimColor: Color(0xddfefefe),
+          backgroundColor: Color(0xFFfefefe),
           width: 250,
         ),
         listTileTheme: const ListTileThemeData(
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
           tileColor: Color(0xFFfefefe),
         ),
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-          backgroundColor: Color(0xFFe1d5c9),
+          backgroundColor: Color(0xFFfefefe),
           selectedIconTheme: IconThemeData(color: Color(0xFFc49450)),
           unselectedIconTheme: IconThemeData(color: Color(0xFF202224)),
           selectedLabelStyle:
