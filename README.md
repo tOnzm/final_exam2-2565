@@ -218,6 +218,20 @@ class _DrawerMenuState extends State<DrawerMenu> {
   }
 }
 ```
+### เรียกใช้ Drawer Menu
+```dart
+ @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+    drawer: DrawerMenu(),
+    .
+    .
+    .
+    .
+    );
+
+```
+
 ## ตัวอย่างหน้าจอ User Interface 
 
 ![App_UI](./ui.png)
