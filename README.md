@@ -50,7 +50,7 @@ List<List<dynamic>>? data;
   }
 ```
 
-## การแสดงผลผ่านหน้าจอ
+### การแสดงผลผ่านหน้าจอ
 
 ```dart
 body: Center(
@@ -102,3 +102,7 @@ body: Center(
       ),
 
 ```
+## ตัวอย่างหน้าจอ User Interface 
+
+![App_UI](./ui.png)
+
