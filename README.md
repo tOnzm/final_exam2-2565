@@ -28,10 +28,23 @@ dependencies:
 import 'package:csv/csv.dart';
 import 'package:google_fonts/google_fonts.dart';
 ```
-## แปลงข้อมูลจาก .csv เป็น List 
+## การอ่านข้อมูลจากไฟล์ .csv  
+- นำเข้าข้อมูล .csv จากโฟลเดอร์ assets 
+- แปลงข้อมูลใน .csv เป็น string ส่วนข้อมูลที่เป็น int และ bouble จะไม่เปลี่ยน 
+  โดยใช้ CsvListConverter
+- แสดงผลข้อมูลเป็น List 
+
+```yaml
+flutter:
+
+ 
+  uses-material-design: true
+
+  assets:
+      - assets/ข้อมูลวัด.csv
+```
 
 ```dart
-import 'package:csv/csv.dart';
 
 List<List<dynamic>>? data;
 
@@ -50,8 +63,11 @@ List<List<dynamic>>? data;
   }
 ```
 
-### การแสดงผลผ่านหน้าจอ
+### การแสดงผลข้อมูล
+- ListView จะเป็น
 
+- title ถูกกำหนดให้แสดงข้อมูลในแถวที่ 1
+- subtitle ถูกกำหนดให้แสดงข้อมูลในแถวที่ 6 
 ```dart
 body: Center(
         child: Container(
@@ -103,6 +119,10 @@ body: Center(
 
 ```
 ## Bottom Navigator Bar
+- _selectedIndex ถูกกำหนดไว้ที่ 0 เป็นการกำหนดให้แสดงหน้า Index 0
+- _onItemTapped จะทำงานเมื่อมีการกดไปยังปุ่ม
+  - เมื่อกดที่ปุ่ม หน้าแรก จะนำทางไปยัง HomePage [Index0]
+  - เมื่อกดที่ปุ่ม ผู้จัดทำ จะนำทางไปยัง ProfileMe [Index1]
 
 ```dart
 class _BottomNavBarState extends State<BottomNavBar> {
@@ -149,6 +169,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
 }
 ```
 ## Drawer Menu
+- ใช้สำหรับนำทางมักจะแสดงตรงมุมขาวบน หรือ มุมซ้ายบน
 
 ```dart
 class _DrawerMenuState extends State<DrawerMenu> {
@@ -160,12 +181,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
         children: <Widget>[
           const UserAccountsDrawerHeader(
             decoration: BoxDecoration(
-              /* gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [Color(0xff1b1c1e), Color(0xfffefefe)],
-                ), */
-              color: Color(0xFF3e1d5c9),
+               color: Color(0xFF3e1d5c9),
             ),
             accountName: Text(
               'Thammarat Noongoen',
@@ -219,6 +235,8 @@ class _DrawerMenuState extends State<DrawerMenu> {
 }
 ```
 ### เรียกใช้ Drawer Menu
+- drawer จะเป็นการแสดงผลที่มุมซ้ายบน
+- endDrawer จะเป็นการแสดงผลที่มุมขาวบน
 ```dart
  @override
   Widget build(BuildContext context) {
