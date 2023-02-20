@@ -21,7 +21,8 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> loadAsset() async {
-    final String response = await rootBundle.loadString('assets/ข้อมูลวัด.csv');
+    final String response =
+        await rootBundle.loadString('assets/temple_data.csv');
     final List<List<dynamic>> decoded = CsvToListConverter().convert(response);
     setState(() {
       data = decoded;
